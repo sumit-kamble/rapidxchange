@@ -39,7 +39,7 @@ export const TransactionProvider = ({ children }) => {
       
       const availableTransactions = await transactionsContract.getAllTransactions();
       
-      console.log(availableTransactions);
+      // console.log(availableTransactions);
 
       const structuredTransactions = availableTransactions.map((transaction) => ({
           addressTo: transaction.receiver,

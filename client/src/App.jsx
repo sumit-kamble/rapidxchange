@@ -1,13 +1,24 @@
-import { Navbar, Welcome, Footer, Services, Transactions } from "./components";
+import { Navbar, Welcome, Footer, Services, Transactions, CryptoPrices } from "./components";
+import RupeeToEtherConverter from "./components/RupeeToEtherConverter";
 
 const App = () => (
   <div className="min-h-screen">
     <div className="gradient-bg-welcome">
       <Navbar />
-      <Welcome />
+       <Welcome />
     </div>
+    <section id="market">
+     <CryptoPrices />
+    </section>
+    {/* <CryptoChart /> */}
+    {/* <TypedCharts /> */}
+    <section id="converter">
+      <RupeeToEtherConverter />
+    </section>
     <Services />
-    <Transactions />
+    <section id="transactions">
+      <Transactions />
+    </section>
     <Footer />
   </div>
 );
